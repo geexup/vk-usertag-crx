@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "UserTag",
+  "description": "This extension shows friend-list on users vk page",
+  "version": "1.1.5",
+  "browser_action": {},
+  "permissions": [
+    "https://vk.com/*",
+    "http://vk.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://vk.com/*", "http://vk.com/*", "https://oauth.vk.com/blank.html"],
+      "js": ["Script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "UserTag.js",
+    "auth.html"
+  ]
+}
